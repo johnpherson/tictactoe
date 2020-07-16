@@ -3,15 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        char A1;
-        char A2;
-        char A3;
-        char B1;
-        char B2;
-        char B3;
-        char C1;
-        char C2;
-        char C3;
 
         char[][] gameBoard = {
                               {' ','|',' ','|',' '},
@@ -55,6 +46,41 @@ public class Main {
             break;
         }
 
+        System.out.println("O, Make a selection of 1-9 on the board");
+        Scanner oInput = new Scanner(System.in);
+        int oChoice = oInput.nextInt();
+
+        switch (oChoice) {
+            case 1:
+                gameBoard[0][0] = 'O';
+                break;
+            case 2:
+                gameBoard[0][2] = 'O';
+                break;
+            case 3:
+                gameBoard[0][4] = 'O';
+                break;
+            case 4:
+                gameBoard[2][0] = 'O';
+                break;
+            case 5:
+                gameBoard[2][2] = 'O';
+                break;
+            case 6:
+                gameBoard[2][4] = 'O';
+                break;
+            case 7:
+                gameBoard[4][0] = 'O';
+                break;
+            case 8:
+                gameBoard[4][2] = 'O';
+                break;
+            case 9:
+                gameBoard[4][4] = 'O';
+                break;
+        }
+
+
         printGameBoard(gameBoard);
 
     }
@@ -66,8 +92,7 @@ public class Main {
                 }
                 System.out.println();
             }
-        }
-
+     }
 };
 
 
