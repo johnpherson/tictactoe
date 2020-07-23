@@ -1,15 +1,17 @@
+import java.awt.*;
 import java.util.Scanner;
+import javax.swing.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-        System.out.println("Play again?");
+        //ask player if they are ready
+        System.out.println("Ready to play? (1 = Yes 2 = No)");
         Scanner nInput = new Scanner(System.in);
         int plyAgain = nInput.nextInt();
 
-
+        //sets the game board
         char[][] gameBoard = {
                 {' ', '|', ' ', '|', ' '},
                 {'-', '+', '-', '+', '-'},
@@ -18,7 +20,7 @@ public class Main {
                 {' ', '|', ' ', '|', ' '}
         };
 
-
+        //actual game
         while (plyAgain == 1) {
             System.out.println("X, Make a selection of 1-9 on the board");
             Scanner xInput = new Scanner(System.in);
@@ -99,6 +101,7 @@ public class Main {
 
     }
 
+    //prints the game board
     public static void printGameBoard(char[][] gameBoard) {
         for (char[] row : gameBoard) {
             for (char c : row) {
@@ -106,7 +109,11 @@ public class Main {
             }
             System.out.println();
         }
+
+
     }
+
+
 };
 
 
